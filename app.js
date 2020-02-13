@@ -28,5 +28,37 @@
 //     }).catch((err) => {
 //         console.log(err);
 //     })
+
+
+async function doMath() {
+    try {
+        let num = await slowMath.add(6, 2);
+        console.log(num);
+        num = await slowMath.multiply(num,2);
+        console.log(num);
+        num = await slowMath.divide(num, 4);
+        console.log(num);
+        num = await slowMath.subtract(num, 3);
+        console.log(num);
+        num = await slowMath.add(num, 98);
+        console.log(num);
+        num = await slowMath.remainder(num, 2);
+        console.log(num);
+        num = await slowMath.multiply(num, 50);
+        console.log(num);
+        num = await slowMath.remainder(num, 40);
+        console.log(num);
+        num = await slowMath.add(num, 32);
+        console.log(num);
+
+
+
+    } catch (err) {
+        err = new Error ('You tried')
+        console.log(err)
+    }
+}
+doMath()
+        
+  
    
-    
